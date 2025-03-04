@@ -20,3 +20,21 @@
 # Both list1 and list2 are sorted in non-decreasing order.
 
 # ANSWER
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        if list1[0] > list2[0]:
+            start = len(list1)
+        else if list1[0] == list2[0]:
+            start = list1[0]
+        else:
+            start = list2[0]
+
+        
+        
+
+        
