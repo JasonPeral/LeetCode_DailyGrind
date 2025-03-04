@@ -19,12 +19,30 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for x in range(len(nums)):
-            for y in range(x + 1, len(nums)):
-                if nums[x] + nums[y] == target:
+        for y in range(len(nums)):
+            for x in range(y + 1, len(nums)):
+                if nums[x] + nums[y] == target: 
                     return [x, y]
-            else:
-                continue
+                else:
+                    continue;
+            
+
+
+
+
+
+
+
+
+
+
+
+        # for x in range(len(nums)):
+        #     for y in range(x + 1, len(nums)):
+        #         if nums[x] + nums[y] == target:
+        #             return [x, y]
+        #     else:
+        #         continue
         
 
 #creating an instance of the solution class to get an output for this example
@@ -32,7 +50,7 @@ solution = Solution()
 
 # Test cases
 test_cases = [
-    ([2, 7, 11, 15], 9),   
+    ([2, 7, 11, 15], 18),   
     ([3, 2, 4, 5 , 4], 6),        
     ([3, 3], 6)            
 ]
