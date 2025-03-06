@@ -27,6 +27,8 @@
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummyNode = Listnode() #Dummy node to assign merging logic
+        curent = dummyNode #Pointer that will build the new merged list
         if list1[0] > list2[0]:
             start = len(list1)
         else if list1[0] == list2[0]:
