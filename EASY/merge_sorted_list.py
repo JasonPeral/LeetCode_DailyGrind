@@ -29,12 +29,28 @@ class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         dummyNode = Listnode() #Dummy node to assign merging logic
         curent = dummyNode #Pointer that will build the new merged list
-        if list1[0] > list2[0]:
-            start = len(list1)
-        else if list1[0] == list2[0]:
-            start = list1[0]
-        else:
-            start = list2[0]
+
+        while list1 and list2:
+            if list1.val < list2.val:
+                current.next = list1
+                list1 = list1.next
+            else:
+                current.next = list2
+                list2 = list2.next
+            current = current.next
+
+        current.next = list1 if list1 else list2
+
+        return dummy.next 
+
+
+#SCRATCH This
+        # if list1[0] > list2[0]:
+        #     start = len(list1)
+        # else if list1[0] == list2[0]:
+        #     start = list1[0]
+        # else:
+        #     start = list2[0]
 
         
         
