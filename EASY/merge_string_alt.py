@@ -9,6 +9,21 @@ Input: word1 = "abc", word2 = "pqr"     → Output: "apbqcr"
 Input: word1 = "ab", word2 = "pqrs"     → Output: "apbqrs"
 """
 
+"""
+Thought process
+
+1. We need a variable that will hold the new string that is merged from word1 and word2 respectively
+
+2. We need a way to compare whether word1 or word2 is longer or shorter than each other (len of each str and then use a comparison operator)
+
+3. We need to loop through the shorter string to ensure we are not looping through uneccesary iterations as we can append the rest after our loop through the shorter str
+
+4. Add word1 onto tracking variable then word2 respectively. Desctructering the correct letter is based on the loop iteration we are on and using the bracket notation.
+
+5. Should there be be letters left in the longer str we can add onto the tracking variable using the length of the shorter str as the start and the length of the longer str as the end of the string extraction
+
+6. Return the tracking variabe as final output
+"""
 
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
@@ -29,7 +44,7 @@ class Solution:
                 tracking += word1[x]
                 tracking += word2[x]
             tracking += word1[y1: x1]
-
+        print(tracking)
         return tracking
     
     # Tests
