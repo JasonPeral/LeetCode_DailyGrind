@@ -1,3 +1,15 @@
+"""
+LeetCode 1768: Merge Strings Alternately
+
+Given two strings, merge them by alternating characters starting with word1.
+If one string is longer, append the rest at the end.
+
+Examples:
+Input: word1 = "abc", word2 = "pqr"     → Output: "apbqcr"
+Input: word1 = "ab", word2 = "pqrs"     → Output: "apbqrs"
+"""
+
+
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         
